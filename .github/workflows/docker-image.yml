@@ -16,3 +16,5 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag wcms-drupalci9:$(date +%s)
+    - name: Push image to container registry
+      run: docker push ghcr.io/OWNER/IMAGE_NAME:latest
