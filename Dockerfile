@@ -22,7 +22,7 @@ RUN echo 'memory_limit = -1' > /usr/local/etc/php/php-cli.ini
 RUN rm -rf ..?* .[!.]* *
 
 # Install composer.
-COPY scripts/composer-installer.sh /tmp/composer-installer.sh
+COPY composer-installer.sh /tmp/composer-installer.sh
 RUN chmod +x /tmp/composer-installer.sh && \
     /tmp/composer-installer.sh && \
     mv composer.phar /usr/local/bin/composer && \
