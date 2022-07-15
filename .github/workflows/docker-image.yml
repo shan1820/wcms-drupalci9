@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag wcms-drupalci9:$(date +%s)
     - name: Push image to container registry
-      run: docker push ghcr.io/OWNER/IMAGE_NAME:latest
+      run: docker push ghcr.io/shan1820/drupal9ci:latest
