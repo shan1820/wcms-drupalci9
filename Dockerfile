@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
   sudo \
   unzip \
   vim \
+  python3 \
   wget && \
   docker-php-ext-install bcmath && \
   docker-php-ext-install mysqli && \
