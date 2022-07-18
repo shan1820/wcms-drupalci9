@@ -26,14 +26,14 @@ COPY composer-installer.sh /tmp/composer-installer.sh
 RUN chmod +x /tmp/composer-installer.sh && \
     /tmp/composer-installer.sh && \
     mv composer.phar /usr/local/bin/composer && \
-    composer self-update --1
+    composer self-update --2
 
 # Install XDebug.
 RUN pecl install xdebug && \
     docker-php-ext-enable xdebug
 
 # Install node.
-RUN curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - && \
     apt install -y nodejs xvfb libgtk-3-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2
 
 # Install Chrome browser.
