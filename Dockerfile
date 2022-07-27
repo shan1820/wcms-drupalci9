@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
   vim \
   python3 \
   python \
+  bash \
   wget && \
   docker-php-ext-install bcmath && \
   docker-php-ext-install mysqli && \
