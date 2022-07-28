@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
   sudo \
   unzip \
   vim \
+  nano \
   python3 \
   python \
   bash \
@@ -48,5 +49,7 @@ RUN apt-get install --yes gnupg2 apt-transport-https && \
     
 # Create drupal8 directory    
 RUN mkdir /var/www/drupal8
+
+RUN echo "alias ll='ls -alF'" >> ~/.profile
 
 RUN echo "Finished build of image."
