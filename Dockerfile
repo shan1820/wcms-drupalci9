@@ -25,6 +25,10 @@ RUN echo 'memory_limit = -1' > /usr/local/etc/php/php-cli.ini
 # Remove the vanilla Drupal project that comes with this image.
 RUN rm -rf ..?* .[!.]* *
 
+# Add PDFTK to build
+COPY ./pdftk* /usr/local/bin/
+RUN chmod 775 /usr/local/bin/pdftk*
+
 # Install composer.
 COPY composer-installer.sh /tmp/composer-installer.sh
 RUN chmod +x /tmp/composer-installer.sh && \
