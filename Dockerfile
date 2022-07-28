@@ -46,4 +46,7 @@ RUN apt-get install --yes gnupg2 apt-transport-https && \
     apt-get update && \
     apt-get install --yes google-chrome-unstable
     
+# Create drupal8 directory    
+RUN mkdir /var/www/drupal8
+
 RUN echo "Finished build of image."
